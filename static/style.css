@@ -1,0 +1,100 @@
+
+body{
+    background-color: black;
+    background-image: url(img/kagejitsu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.reg_btn{
+    text-align: center;
+    margin-top: 20%;
+}
+.news_btn{
+    text-align: center;
+    
+    
+}
+
+.news{
+    overflow: auto;
+    word-wrap: break-word;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    
+}
+.news .n_title{
+    font-size: large;
+    font-weight: bold;
+    color: red;
+}
+.news .n_news{
+    white-space: pre-line;
+    line-height: 1em;
+    margin-left: auto;
+    color: white;
+
+}
+.n_label{
+    color: red;
+}
+.login{
+    text-align: center;
+    margin-top: 20%;
+    opacity: 1;
+}
+.news_sent{
+    color: red;
+}
+.admin_page{
+    color: red;
+    text-align: center;
+}
+.admin_form{
+    text-align: center;
+    margin-top: 10%;
+}
+.view_news{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

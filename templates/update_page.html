@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+</head>
+<body>
+    <div class="admin_dashboard" style="text-align: center;">
+        <a href="{{url_for('admin')}}" style="color: red;"><h1>ADMIN PAGE</h1></a>
+    </div>
+    <div style="text-align: center; margin-top: 10%;">
+        {% for i in data %}
+        <div class="n_title">
+            <form action="{{url_for('update_news')}}" method="POST">
+                <input type="hidden" name="title_id" value={{i.id}}>
+                
+                <button style="width: 50%;">{{ i.title }}</button>
+            </form>
+        </div>
+        <div style="padding: 2px;"></div>
+        {% endfor %}
+      </div>
+    
+</body>
+</html>

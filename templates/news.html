@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style1.css') }}">
+</head>
+<body>
+    <form action="{{url_for('index')}}">
+        <button style="background-color: black; color: red;"<h2> <<< </h2></button>
+    </form>
+    <div class="n_label">
+    <h1><center>NEWS</center></h1>
+    </div>
+    <div class="news">
+        {% for i in data %}
+        <div class="n_title">
+            {{ i.title }}
+        </div>
+        <div class="n_news">
+            {{ i.news }}
+        </div>
+        <br>
+
+        {% endfor %}
+      </div>
+</body>
+</html>

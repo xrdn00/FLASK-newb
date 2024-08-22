@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+
+</head>
+<body> 
+    <form action="{{url_for('index')}}">
+        <button>BACK</button>
+    </form>
+    <center><h1>Please fill the required information needed below in order to subscribe.</h1></center>
+    
+    
+    <center>
+    <div class="reg_form" style="margin-top: 20%;">
+    <form action="" method="POST">
+        <h2>Subscribe now!</h2>
+        <input type="text" name = "firstname" placeholder="Firstname" required>
+        <div style="padding: 2px;"></div>
+        <input type="text" name = "lastname" placeholder="Lastname" required>
+        <div style="padding: 2px;"></div>
+        <input type="email" name = "email" placeholder="Email" required>
+        <div class="sub_btn" style="padding: 1%;">
+            <button>SUBMIT</button>
+        </div>
+        
+    </form>
+    </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+</head>
+<body>
+    <div class="admin_page">
+        <h1>ADMIN PAGE</h1>
+    </div>
+    
+    <div class="admin_form">
+    <form action="" method="POST">
+        <input type="text" name = "title" size="103" placeholder="Title" required>
+        <div style="padding: 1px;"></div>
+        <textarea name="news" id="news" cols="100" rows="20" placeholder="Message" required></textarea>
+        <div style="padding: 1px;"></div>
+        <button style="background-color: black; color: red;">Submit</button>
+    </form>
+    </div>
+    <div class="view_news">
+        <form action="{{url_for('news')}}">
+            <button style="width: 58px; margin: 10px;background-color: black; color: red;">News</button>
+        </form>
+    </div>
+    <div style="text-align: center;">
+    <form action="{{url_for('update_page')}}">
+        <button style="width: 50%; background-color: black; margin-top: 15%; color: red;">Update/Delete</button>
+    </form>
+    </div>
+</body>
+</html>

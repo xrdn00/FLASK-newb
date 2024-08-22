@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+</head>
+<body>
+    <form action="{{url_for('update')}}" method="POST">
+    <div style="margin-left: 30%; margin-top: 10%;">
+    <h3 style="color: red;">Title:</h3>
+    <textarea name="title" id="" cols="100" rows="1" style="resize: none; overflow: hidden;">{{result.title}}</textarea>
+    <br>
+    <h3 style="color: red;">News:</h3>
+    <textarea name="news" id="" cols="100" rows="20">{{result.news}}</textarea>
+    <br>
+    <input type="hidden" name="id" value= {{result.id}} >
+    <button style="width: 80px;">UPDATE</button>
+    
+    </div>
+    </form>
+    <div>
+        <form action="{{url_for('delete')}}" method="POST">
+            <input type="hidden" name="id" value= {{result.id}} >
+            <button style="margin-left: 30%;width: 80px;">DELETE</button>
+        </form>
+    </div>
+    <div>
+        <form action="{{url_for('update_page')}}">
+            <input type="hidden" name="id" value= {{result.id}} >
+            <button style="margin-left: 30%;width: 80px;margin-top: 15px;">BACK</button>
+        </form>
+    </div>
+
+</body>
+</html>
